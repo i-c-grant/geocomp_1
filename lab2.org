@@ -1,0 +1,10 @@
+* tracking top common names
+** requirements
+   - keep track of the most commonly used names
+   - store both the names and the corresponding counts
+   - sort together
+** possible implementations
+*** 2D array
+    - ["name", count], ["name", count]
+    - 
+

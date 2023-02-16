@@ -1,0 +1,7 @@
+import platform
+print(platform.python_version())
+
+import random
+random.seed(6245)
+
+print(random.randInt())
