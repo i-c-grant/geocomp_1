@@ -78,6 +78,10 @@ The mean area of the 72 counties in Wisconsin is 752.19.
 The smallest is Pepin County, with an area of 231.983.
 The largest is Marathon County, with an area of 1544.983.
 
+The mean area of the 67 counties in Pennsylvania is 667.8.
+The smallest is Montour County, with an area of 130.242.
+The largest is Lycoming County, with an area of 1228.594.
+
 The mean area of the 67 counties in Alabama is 755.9.
 The smallest is Etowah County, with an area of 534.991.
 The largest is Baldwin County, with an area of 1589.784.
@@ -86,21 +90,17 @@ The mean area of the 67 counties in Florida is 800.37.
 The smallest is Union County, with an area of 243.556.
 The largest is Collier County, with an area of 1998.324.
 
-The mean area of the 67 counties in Pennsylvania is 667.8.
-The smallest is Montour County, with an area of 130.242.
-The largest is Lycoming County, with an area of 1228.594.
-
 The mean area of the 66 counties in South Dakota is 1148.65.
 The smallest is Clay County, with an area of 412.185.
 The largest is Meade County, with an area of 3470.984.
 
-The mean area of the 64 counties in Louisiana is 675.06.
-The smallest is Orleans County, with an area of 169.423.
-The largest is Vernon County, with an area of 1327.91.
-
 The mean area of the 64 counties in Colorado is 1619.4.
 The smallest is Broomfield County, with an area of 33.034.
 The largest is Las Animas County, with an area of 4772.672.
+
+The mean area of the 64 counties in Louisiana is 675.06.
+The smallest is Orleans County, with an area of 169.423.
+The largest is Vernon County, with an area of 1327.91.
 
 The mean area of the 62 counties in New York is 760.1.
 The smallest is New York County, with an area of 22.829.
@@ -190,13 +190,13 @@ The mean area of the 8 counties in Connecticut is 605.29.
 The smallest is Middlesex County, with an area of 369.301.
 The largest is Litchfield County, with an area of 920.56.
 
-The mean area of the 5 counties in Hawaii is 1284.53.
-The smallest is Kalawao County, with an area of 11.991.
-The largest is Hawaii County, with an area of 4028.417.
-
 The mean area of the 5 counties in Rhode Island is 206.76.
 The smallest is Bristol County, with an area of 24.164.
 The largest is Providence County, with an area of 409.502.
+
+The mean area of the 5 counties in Hawaii is 1284.53.
+The smallest is Kalawao County, with an area of 11.991.
+The largest is Hawaii County, with an area of 4028.417.
 
 The mean area of the 3 counties in Delaware is 649.51.
 The smallest is New Castle County, with an area of 426.286.
