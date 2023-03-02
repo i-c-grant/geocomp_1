@@ -1,0 +1,12 @@
+from .Geom import Geom
+
+
+class Shape(Geom):
+    """"""
+    
+    def __init__(self, blueprint):
+        """"""
+        self.blueprint = blueprint
+        self.description = self.construct(blueprint)
+        # self.desc = self.construct(blueprint)
+        super().__init__()

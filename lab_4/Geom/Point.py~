@@ -1,0 +1,10 @@
+from .Geom import Geom
+
+class Point(Geom):
+
+    def __init__(self, x: float, y: float):
+        """"""
+        self.geomType = "Point"
+        self.x = x
+        self.y = y
+        super().__init__()

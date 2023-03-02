@@ -1,0 +1,10 @@
+from .Geom import Geom
+
+class Vector(Geom):
+
+    def __init__(self, magnitude: float, direction: float):
+        """"""
+        self.geomType = "Vector"
+        self.magnitude = magnitude
+        self.direction = direction
+        super().__init__()
