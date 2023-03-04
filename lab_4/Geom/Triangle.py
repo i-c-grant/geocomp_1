@@ -2,7 +2,6 @@ from .Geom import Geom
 from .Shape import Shape
 from .Point import Point
 
-
 class Triangle(Shape):
     """"""
 
@@ -55,6 +54,6 @@ class Triangle(Shape):
         props["side1"] = points[0].distance(points[1])
         props["side2"] = points[0].distance(points[2])
         props["side3"] = points[1].distance(points[2])
-        props["area"] = (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2
+        props["area"] = abs((x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2)
 
         return props
