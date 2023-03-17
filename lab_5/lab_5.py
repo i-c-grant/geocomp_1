@@ -215,5 +215,3 @@ state_scatter_no_AK.show()
 # counties, and these counties are moderately sized--smaller than
 # average for a big state, but larger than average for a state with
 # many counties.
-
-

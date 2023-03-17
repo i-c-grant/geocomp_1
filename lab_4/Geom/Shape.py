@@ -49,6 +49,21 @@ class Shape(Geom):
 
             self.points[i] = Point([newx, newy])
 
-            
+    def constructPoints(self, blueprint):
+        """"""
+        raise BaseException
+
+    def constructProperties(self, blueprint):
+        """"""
+        raise BaseException
+
+
+
+
+
+
+
+
+        
         
         

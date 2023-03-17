@@ -1,0 +1,88 @@
+import geopandas as gp
+import pandas as pd
+import requests
+import plotly.express as px
+import shapely.geometry as shp
+import matplotlib.pyplot as plt
+
+
+def json_response(url, limit=500000):
+    # Limit will determine how many rows are read
+    my_params = {"$limit": limit}
+    with requests.get(url, params=my_params) as response:
+        return response.json()
+
+
+def gdf_from_url(url, limit=500000):
+    response = json_response(url, limit)
+    gdf = gp.GeoDataFrame.from_features(response)
+    return gdf
+
+pd.DataFrame()
+def gdf_dict(url_dict, max_size=500000):
+    ans = {}
+    for key in url_dict:
+        ans[key] = gdf_from_url(url_dict[key], max_size)
+    return ans
+
+
+def gdf_dict_to_gpkg(gdf_dict, path, max_size=500000):
+    for key in gdf_dict:
+        gdf_dict[key].to_file(path, layer=key, driver="GPKG")
+
+
+def urls_to_gpkg(url_dict, path, max_size=500000):
+    my_gdf_dict = gdf_dict(url_dict, max_size)
+    return gdf_dict_to_gpkg(my_gdf_dict, path)
+
+
+my_urls = {
+    "census": "https://data.cityofnewyork.us/resource/63ge-mke6.geojson",
+    "bike_routes": "https://data.cityofnewyork.us/resource/s5uu-3ajy.geojson",
+    "street_centerline": "https://data.cityofnewyork.us/resource/8rma-cm9c.geojson",
+    "vision_zero" : "https://data.cityofnewyork.us/resource/h9gi-nx95.geojson",
+    "bikes_in_buildings" : "https://data.cityofnewyork.us/resource/scjj-6yaf.geojson",
+    "priority_bike_districts" : "https://data.cityofnewyork.us/resource/h6b2-3v9f.geojson"
+}
+
+urls_to_gpkg(my_urls, "my_bike_map.gpkg")
+
+# gdf_bike_routes = gp.GeoDataFrame.from_features(json_response(bike_routes_url, 500000))
+
+# census_geojson = json_response(census_url, 500000)
+
+# The JSON response is wrapped in a FeatureCollection.
+# print(census_geojson["type"])
+
+# Therefore, we can use the 'from_features()' constructor for the
+# GeoDataFrame.
+
+
+gdf_census_file = gp.read_file("2020_census_tracts.geojson")
+
+gdf_census_original.to_file(
+    "/home/ian/Documents/classes/spring_2023/geocomp_1/labs/lab_6/census_tracts_original.gpkg"
+)
+
+gdf_census_file.to_file(
+    "/home/ian/Documents/classes/spring_2023/geocomp_1/labs/lab_6/census_tracts_file.gpkg"
+)
+# census_plot = px.choropleth(gdf_census, geojson=census_geojson,
+# locations='geoid',color="shape_area")
+
+base = gdf_census_original.plot(facecolor="none", edgecolor="black")
+
+# In the case of bike routes, the Socrata Open Data API provides a
+# JSON instead of a GeoJSON. A GeoJSON can be downloaded statically
+# from the website, but it's straightforward to make a GeoDataFrame
+# from the API's JSON response.
+
+gdf_bike_routes = gp.GeoDataFrame.from_features(json_response(bike_routes_url, 500000))
+
+gdf_bike_routes.plot(ax=base, color="green")
+plt.show()
+
+# Write to GeoPackage
+gdf_bike_routes.to_file(
+    "/home/ian/Documents/classes/spring_2023/geocomp_1/labs/lab_6/bike_lanes.gpkg"
+)
