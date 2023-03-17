@@ -108,4 +108,6 @@ to_plot = ["census", "priority_bike_districts", "street_centerline", "bike_route
 
 plt.close()
 quickplot_gdf_dict(my_gdf_dict, to_plot, my_colors)
-plt.savefig('output/my_quick_bike_plot.png', format='png')
+
+plt.show()
+plt.savefig('my_quick_bike_plot.png', format='png')
